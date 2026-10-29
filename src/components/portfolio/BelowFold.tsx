@@ -54,10 +54,16 @@ export default function BelowFold() {
                 ))}
               </ul>
               <div className="mt-6 border-t pt-4 text-sm">
-                <p className="text-muted-foreground">Repository &amp; demo: links not yet added</p>
-                <a href={links.github} {...ext} className="mt-1 inline-block font-semibold text-primary hover:underline">
-                  GitHub profile ↗<span className="sr-only"> (opens in new tab)</span>
-                </a>
+                {p.repository || p.demo ? (
+                  <div className="flex flex-wrap gap-4">
+                    {p.repository && <a href={p.repository} {...ext} className="font-semibold text-primary hover:underline">Repository ↗<span className="sr-only"> (opens in new tab)</span></a>}
+                    {p.demo && <a href={p.demo} {...ext} className="font-semibold text-primary hover:underline">Live demo ↗<span className="sr-only"> (opens in new tab)</span></a>}
+                  </div>
+                ) : (
+                  <a href={links.github} {...ext} className="font-semibold text-primary hover:underline">
+                    GitHub profile ↗<span className="sr-only"> (opens in new tab)</span>
+                  </a>
+                )}
               </div>
             </article>
           ))}
@@ -107,10 +113,12 @@ export default function BelowFold() {
           </div>
         </div>
         <div className="mt-8 flex flex-wrap items-center gap-4">
-          <a href={links.resume} className="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/85">
-            Download resume (PDF)
+          <a href={links.resume} download="Gaurav_Balade_Resume.pdf" className="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/85">
+            Download resume (PDF) ↓
           </a>
-          <p className="text-sm text-muted-foreground">PDF coming soon — request a copy by email in the meantime.</p>
+          <a href={links.resume} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-primary hover:underline">
+            View resume ↗
+          </a>
         </div>
       </Section>
 
