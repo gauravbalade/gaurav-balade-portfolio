@@ -9,8 +9,8 @@ export function Header() {
         Skip to content
       </a>
       <nav aria-label="Primary" className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
-        <a href="#top" className="font-display text-xl font-semibold">
-          G<span className="text-gradient">B</span>
+        <a href="#top" aria-label="Gaurav Balade, back to top" className="font-display text-xl font-semibold">
+          G<span className="text-primary">B</span>
         </a>
         <ul className="hidden gap-8 md:flex">
           {navItems.map((n) => (
@@ -23,7 +23,7 @@ export function Header() {
         </ul>
         <button
           type="button"
-          className="rounded-md border p-2 md:hidden"
+          className="min-h-11 min-w-11 rounded-md border p-3 md:hidden"
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label={open ? "Close menu" : "Open menu"}
