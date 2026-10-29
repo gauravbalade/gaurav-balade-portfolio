@@ -3,7 +3,7 @@ export const links = {
   github: "https://github.com/gauravbalade",
   leetcode: "https://leetcode.com/u/gauravbalade/",
   linkedin: "https://linkedin.com/in/gaurav-balade-86bbb3321",
-  resume: "#resume",
+  resume: "/resume.pdf",
 };
 
 export const navItems = [
@@ -17,6 +17,8 @@ export const navItems = [
 export const projects = [
   {
     title: "PropertySetu",
+    repository: "https://github.com/gauravbalade/propertysetu",
+    demo: "https://frontend-six-amber-63.vercel.app",
     tags: ["Academic project", "Payments: test mode"],
     stack: ["React", "Spring Boot", "MySQL", "JWT", "Razorpay (Test Mode)"],
     description:
