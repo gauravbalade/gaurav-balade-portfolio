@@ -58,8 +58,8 @@
   --input: oklch(0.32 0.035 265);
   --ring: oklch(0.72 0.15 255);
   --gradient-accent: linear-gradient(120deg, var(--primary), var(--violet));
-  --gradient-glow: radial-gradient(60% 50% at 70% 20%, color-mix(in oklab, var(--violet) 28%, transparent), transparent 70%),
-    radial-gradient(50% 40% at 15% 40%, color-mix(in oklab, var(--primary) 20%, transparent), transparent 70%);
+  --gradient-glow: radial-gradient(60% 50% at 70% 20%, color-mix(in oklab, var(--violet) 12%, transparent), transparent 70%),
+    radial-gradient(50% 40% at 15% 40%, color-mix(in oklab, var(--primary) 9%, transparent), transparent 70%);
   --shadow-card: 0 20px 50px -25px color-mix(in oklab, var(--primary) 35%, transparent);
 }
 
@@ -76,6 +76,7 @@
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
   }
+  :focus-visible { outline: 2px solid var(--color-ring); outline-offset: 3px; border-radius: 6px; }
   ::selection { background: color-mix(in oklab, var(--violet) 45%, transparent); }
 }
 

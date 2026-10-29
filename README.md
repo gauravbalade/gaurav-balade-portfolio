@@ -63,3 +63,9 @@ Add the domain in the host's Domains settings, then create the DNS records it sh
 
 ## Screenshots / live link
 Add screenshots to `docs/` or paste the published URL here after deploying.
+
+## Remaining user-provided steps
+- **Resume PDF:** not yet included. Add `public/resume.pdf` and set `resume: "/resume.pdf"` in `src/components/portfolio/data.ts`.
+- **Project repository/demo links:** not yet verified, so cards say "links not yet added" and point to the GitHub profile. Add verified URLs in `data.ts`.
+- **GitHub sync:** connect the project to GitHub from the Lovable editor (GitHub → Connect) to get the source in your own repository before deploying to Vercel/Netlify.
+- **Hosting badge:** the "Edit with Lovable" badge on the published site can be hidden in Project Settings → General (paid plan).

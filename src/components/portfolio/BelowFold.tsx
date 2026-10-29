@@ -36,8 +36,8 @@ export default function BelowFold() {
 
       <Section id="projects" eyebrow="02 — Projects" title="Selected work.">
         <div className="grid gap-6 md:grid-cols-3">
-          {projects.map((p) => (
-            <article key={p.title} className="group flex flex-col rounded-2xl border bg-card p-6 transition-all hover:-translate-y-1 hover:border-primary/60 hover:shadow-card">
+          {projects.map((p, idx) => (
+            <article key={p.title} className="group flex flex-col rounded-2xl border bg-card p-6 transition-all hover:-translate-y-0.5 hover:border-primary/50 motion-reduce:hover:translate-y-0">
               <div className="flex flex-wrap gap-2">
                 {p.tags.map((t) => (
                   <span key={t} className="rounded-full bg-accent px-2.5 py-0.5 font-mono text-[11px] uppercase tracking-wider text-accent-foreground">
@@ -45,16 +45,20 @@ export default function BelowFold() {
                   </span>
                 ))}
               </div>
-              <h3 className="mt-5 font-display text-2xl font-medium">{p.title}</h3>
+              <p className="mt-5 font-mono text-xs text-muted-foreground">0{idx + 1}</p>
+              <h3 className="mt-1 font-display text-2xl font-medium">{p.title}</h3>
               <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{p.description}</p>
               <ul className="mt-5 flex flex-wrap gap-2" aria-label="Tech stack">
                 {p.stack.map((s) => (
                   <li key={s}><Chip>{s}</Chip></li>
                 ))}
               </ul>
-              <a href={links.github} {...ext} className="mt-6 text-sm font-semibold text-primary hover:underline">
-                View on GitHub profile →
-              </a>
+              <div className="mt-6 border-t pt-4 text-sm">
+                <p className="text-muted-foreground">Repository &amp; demo: links not yet added</p>
+                <a href={links.github} {...ext} className="mt-1 inline-block font-semibold text-primary hover:underline">
+                  GitHub profile ↗<span className="sr-only"> (opens in new tab)</span>
+                </a>
+              </div>
             </article>
           ))}
         </div>
@@ -103,7 +107,7 @@ export default function BelowFold() {
           </div>
         </div>
         <div className="mt-8 flex flex-wrap items-center gap-4">
-          <a href={links.resume} className="bg-gradient-accent rounded-full px-6 py-3 text-sm font-semibold text-primary-foreground shadow-card">
+          <a href={links.resume} className="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/85">
             Download resume (PDF)
           </a>
           <p className="text-sm text-muted-foreground">PDF coming soon — request a copy by email in the meantime.</p>
@@ -114,7 +118,7 @@ export default function BelowFold() {
         <p className="max-w-xl text-lg text-muted-foreground">
           Open to internships, collaborations and entry-level software roles. The fastest way to reach me is email.
         </p>
-        <a href={links.email} className="mt-8 inline-block font-display text-3xl text-gradient underline-offset-8 hover:underline sm:text-5xl">
+        <a href={links.email} className="mt-8 inline-block font-display text-3xl text-foreground decoration-primary underline-offset-8 break-all sm:break-normal hover:underline sm:text-5xl">
           gauravbalade@gmail.com
         </a>
         <ul className="mt-10 flex flex-wrap gap-3">
@@ -125,7 +129,7 @@ export default function BelowFold() {
           ].map(([l, h]) => (
             <li key={l}>
               <a href={h} {...ext} className="rounded-full border px-5 py-2.5 text-sm font-semibold transition-colors hover:bg-secondary">
-                {l} ↗
+                {l} ↗<span className="sr-only"> (opens in new tab)</span>
               </a>
             </li>
           ))}
@@ -134,7 +138,7 @@ export default function BelowFold() {
 
       <footer className="border-t">
         <div className="mx-auto max-w-6xl px-5 py-8 text-sm text-muted-foreground sm:px-8">
-          © {new Date().getFullYear()} Gaurav Balade. Built with React.
+          © {new Date().getFullYear()} Gaurav Balade. Designed and built by Gaurav Balade with React.
         </div>
       </footer>
     </>

@@ -20,21 +20,19 @@ export const projects = [
     tags: ["Academic project", "Payments: test mode"],
     stack: ["React", "Spring Boot", "MySQL", "JWT", "Razorpay (Test Mode)"],
     description:
-      "An academic property application and document workflow system. Users submit property applications, upload documents and track status, with JWT-secured REST APIs and Razorpay integrated in test mode only.",
+      "An academic property application and document workflow, built with a React front end and a Spring Boot REST back end secured with JWT. Razorpay is integrated in test mode only — no real payments are processed.",
   },
   {
     title: "Barber Shop Website",
     tags: ["Academic team project"],
     stack: ["HTML", "CSS", "JavaScript"],
-    description:
-      "A responsive website for a barber shop presenting services, pricing and booking information, built as a team with vanilla web technologies.",
+    description: "A website for a barber shop, built as part of an academic team using plain HTML, CSS and JavaScript.",
   },
   {
     title: "Bus Reservation System",
     tags: ["Academic team project"],
     stack: ["Python", "Django", "PostgreSQL"],
-    description:
-      "A web-based reservation system for searching routes and booking seats, built with Django and a PostgreSQL relational schema.",
+    description: "A bus reservation web application, built as part of an academic team with Django and a PostgreSQL database.",
   },
 ];
 
